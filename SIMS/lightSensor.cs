@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SIMS
 {
-    public class Felhasznalo
+    public class lightSensor : Sensor
     {
+
     }
 }

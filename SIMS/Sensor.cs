@@ -8,16 +8,6 @@ namespace SIMS
 {
     public class Sensor
     {
-        public int Temperature {  get; set; }
-        public string LightCond { get; set; }
-        public Sensor(int temperature, string lightcond) 
-        {
-            this.Temperature = temperature;
-            this.LightCond = lightcond;
-        }
-
-
-
-
+        
     }
 }

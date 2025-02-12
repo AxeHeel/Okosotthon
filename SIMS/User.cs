@@ -8,6 +8,7 @@ namespace SIMS
 {
     public class User
     {
-
+        public List<Devices> devices = new List<Devices>();
+        public List<Sensor> sensors = new List<Sensor>();
     }
 }

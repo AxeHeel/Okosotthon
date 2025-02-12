@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace SIMS
 {
-    public class Devices
+    public abstract class Devices
     {
         public string Name { get; set; }
+        public bool Description { get; set; }
+
+        public abstract string Function();
+
     }
 }
