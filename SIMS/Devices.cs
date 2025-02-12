@@ -8,6 +8,6 @@ namespace SIMS
 {
     public class Devices
     {
-        public string Nev { get; set; }
+        public string Name { get; set; }
     }
 }
