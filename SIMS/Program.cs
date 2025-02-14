@@ -8,6 +8,7 @@ namespace SIMS
         static void Main(string[] args)
         {
             var System = new System();
+            
         }
     }
 }

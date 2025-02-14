@@ -11,7 +11,11 @@ namespace SIMS
         public string Name { get; set; }
         public bool Description { get; set; }
 
-        public abstract string Function();
+        public Devices(string name) 
+        {
+            Name = name;
+        }
+        public abstract string Function(double sensorValue);
 
     }
 }

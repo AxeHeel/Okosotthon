@@ -8,16 +8,10 @@ namespace SIMS
 {
     public class Lamp : Devices
     {
-        public override string Function()
+        public Lamp(string name) : base(name) { }
+        public override void Function(double SensorValue)
         {
-            if (Description == true)
-            {
-                return ($"{Name} is on due to the natural circumstances.");
-            }
-            else
-            {
-                return ($"{Name} turned off due to the abundance of light. ");
-            }
+            Description = SensorValue < 50;
         }
     }
 }

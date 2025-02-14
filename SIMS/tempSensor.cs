@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SIMS
 {
-    public class lightSensor : Sensor
+    public class tempSensor : Sensor
     {
-        public lightSensor(string name) : base(name) { }
+        public tempSensor(string name) : base(name) { }
         public override void Measure(double value)
         {
-            Value = value;    
+            Value = value;
         }
     }
 }
