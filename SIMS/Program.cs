@@ -27,14 +27,24 @@ namespace SIMS
             while (!exit)
             {
                 Console.Clear();
-                Console.WriteLine("==== SMART CRIB ====");
-                Console.WriteLine("1. Lamp turn on/off");
-                Console.WriteLine("2. Thermostat manual turn on/off");
-                Console.WriteLine("3. Update Sensor values");
-                Console.WriteLine("4. Update the devices");
-                Console.WriteLine("5. Current state");
-                Console.WriteLine("6. EXIT");
-                Console.Write("CHOOSE: ");
+                Console.WriteLine("          ______________________________________      ");
+                Console.WriteLine("         /\\                                     \\     ");
+                Console.WriteLine("        /  \\                                     \\    ");
+                Console.WriteLine("       /----\\-------------------------------------\\   ");
+                Console.WriteLine("      /      \\                                     \\  ");
+                Console.WriteLine("     /========\\=====================================\\ ");
+                Console.WriteLine("    /          \\                                     \\");
+                Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                Console.WriteLine("    |  ______  |                                    |");
+                Console.WriteLine("    |  |    |  | 1. Lamp turn on/off                |");
+                Console.WriteLine("    |  |----|  | 2. Thermostat manual turn on/off   |");
+                Console.WriteLine("    |  |    |  | 3. Update Sensor values   ______   |");
+                Console.WriteLine("    |  ¯¯¯¯¯¯  | 4. Update the devices     |    |   |");
+                Console.WriteLine("    |          | 5. Current state          |   _|   |");
+                Console.WriteLine("    |          | 6. EXIT                   |    |   |");
+                Console.Write("    |          | CHOOSE:                   |    |   |");
+                Console.WriteLine();
+                Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
 
                 string input = Console.ReadLine();
                 Console.WriteLine();
@@ -57,7 +67,7 @@ namespace SIMS
                         Console.Clear();
                         try
                         {
-                            Console.Write("How dark do you want your room to be (0-100): ");
+                            Console.Write("What is the current light intensity (0-100) : ");
                             if (double.TryParse(Console.ReadLine(), out double newLight))
                             {
                                 if (newLight < 0 || newLight > 100)
@@ -81,7 +91,7 @@ namespace SIMS
                         }
                         try
                         {
-                            Console.Write("Set a temperature for your function (°C): ");
+                            Console.Write("Set a temperature for your function (°C) : ");
                             if (double.TryParse(Console.ReadLine(), out double newTemp))
                             {
                                 if (newTemp < 10 || newTemp > 40)
