@@ -9,6 +9,7 @@ namespace SIMS
     public class lightSensor : Sensor
     {
         public lightSensor(string name) : base(name) { }
+
         public override void Measure(double value)
         {
             Value = value;    
