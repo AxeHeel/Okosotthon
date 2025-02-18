@@ -15,7 +15,7 @@ namespace SIMS
         {
             Name = name;
         }
-        public abstract string Function(double sensorValue);
+        public abstract void Function(double sensorValue);
 
     }
 }
