@@ -67,7 +67,7 @@ namespace SIMS
                         Console.Clear();
                         try
                         {
-                            Console.Write("What is the current light intensity (0-100) : ");
+                            Console.Write("What is the current light intensity (0 - 100) : ");
                             if (double.TryParse(Console.ReadLine(), out double newLight))
                             {
                                 if (newLight < 0 || newLight > 100)
