@@ -55,24 +55,53 @@ namespace SIMS
 
                     case "3":
                         Console.Clear();
-                        Console.Write("How light do you want your room to be (0-100): ");
-                        if (double.TryParse(Console.ReadLine(), out double newLight))
+                        try
                         {
-                            lightSensor.Measure(newLight);
+                            Console.Write("How dark do you want your room to be (0-100): ");
+                            if (double.TryParse(Console.ReadLine(), out double newLight))
+                            {
+                                if (newLight < 0 || newLight > 100)
+                                {
+                                    throw new ArgumentOutOfRangeException(nameof(newLight), "The value was either way too low or way too high.");
+                                }
+                                lightSensor.Measure(newLight);
+                            }
+                            else
+                            {
+                                throw new FormatException("ts pmo icl sybau.");
+                            }
                         }
-                        else
+                        catch (ArgumentOutOfRangeException ex)
                         {
-                            Console.WriteLine("ts pmo icl sybau.");
+                            Console.WriteLine($"ERROR: {ex.Message}");
                         }
-
-                        Console.Write("Set a temperature for your function (°C): ");
-                        if (double.TryParse(Console.ReadLine(), out double newTemp))
+                        catch (FormatException ex)
                         {
-                            tempSensor.Measure(newTemp);
+                            Console.WriteLine($"ERROR: {ex.Message}");
                         }
-                        else
+                        try
                         {
-                            Console.WriteLine("Job had one bro.");
+                            Console.Write("Set a temperature for your function (°C): ");
+                            if (double.TryParse(Console.ReadLine(), out double newTemp))
+                            {
+                                if (newTemp < 10 || newTemp > 40)
+                                {
+                                    throw new ArgumentOutOfRangeException(nameof(newTemp), "The value was either way too low or way too high.");
+                                }
+                                tempSensor.Measure(newTemp);
+                            }
+                            else
+                            {
+                                throw new FormatException("Job had one bro.");
+                            }
+                        }
+                        catch (ArgumentOutOfRangeException ex)
+                        {
+                            Console.WriteLine($"ERROR: {ex.Message}");
+                        }
+                        catch (FormatException ex)
+                        {
+                            Console.WriteLine($"ERROR: {ex.Message}");
                         }
                         break;
 
