@@ -233,7 +233,7 @@ namespace SIMS
                         Console.WriteLine($"\t{lightSensor.Name}: {lightSensor.Value}");
                         Console.WriteLine($"\t{tempSensor.Name}: {tempSensor.Value}");
                         Console.WriteLine();
-                        Console.WriteLine("=========================================================");
+                        Console.WriteLine("==========================================================");
                         Console.WriteLine();
                         Console.WriteLine("\t---------- Device Status ----------");
                         Console.WriteLine();
