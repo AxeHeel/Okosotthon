@@ -52,15 +52,79 @@ namespace SIMS
                 switch (input)
                 {
                     case "1":
-                        Console.Clear();
-                        Lamp.Toggle();
-                        Console.WriteLine($"The {Lamp.Name} is {(Lamp.Description ? "ON" : "OFF")}.");
+                        if (!Lamp.Description)
+                        {
+                            Console.Clear();
+                            Lamp.Toggle();
+                            Console.WriteLine("          ______________________________________      ");
+                            Console.WriteLine("         /\\                                     \\     ");
+                            Console.WriteLine("        /  \\                                     \\    ");
+                            Console.WriteLine("       /----\\-------------------------------------\\   ");
+                            Console.WriteLine("      /      \\                                     \\  ");
+                            Console.WriteLine("     /========\\=====================================\\ ");
+                            Console.WriteLine("    /          \\                                     \\");
+                            Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                            Console.WriteLine("    |  ______  |                                    |");
+                            Console.WriteLine($"    |  |████|  | The {Lamp.Name} is {(Lamp.Description ? "ON." : "OFF")}.                   |");
+                            Console.WriteLine("    |  |----|  |                                    |");
+                            Console.WriteLine("    |  |████|  |                           ______   |");
+                            Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
+                            Console.WriteLine("    |          |                           |   _|   |");
+                            Console.WriteLine("    |          |                           |    |   |");
+                            Console.Write("    |          |                           |    |   |");
+                            Console.WriteLine();
+                            Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Lamp.Toggle();
+                            Console.WriteLine("          ______________________________________      ");
+                            Console.WriteLine("         /\\                                     \\     ");
+                            Console.WriteLine("        /  \\                                     \\    ");
+                            Console.WriteLine("       /----\\-------------------------------------\\   ");
+                            Console.WriteLine("      /      \\                                     \\  ");
+                            Console.WriteLine("     /========\\=====================================\\ ");
+                            Console.WriteLine("    /          \\                                     \\");
+                            Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                            Console.WriteLine("    |  ______  |                                    |");
+                            Console.WriteLine($"    |  |    |  | The {Lamp.Name} is {(Lamp.Description ? "ON." : "OFF")}.                   |");
+                            Console.WriteLine("    |  |----|  |                                    |");
+                            Console.WriteLine("    |  |    |  |                           ______   |");
+                            Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
+                            Console.WriteLine("    |          |                           |   _|   |");
+                            Console.WriteLine("    |          |                           |    |   |");
+                            Console.Write("    |          |                           |    |   |");
+                            Console.WriteLine();
+                            Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        }
+
+                        break;
+
                         break;
 
                     case "2":
                         Console.Clear();
                         Thermostat.ToggleHeating();
-                        Console.WriteLine($"The {Thermostat.Name} is currently {(Thermostat.Heating ? "heating up" : "chillin out")} yo crib .");
+                        Console.WriteLine("          ______________________________________      ");
+                        Console.WriteLine("         /\\                                     \\     ");
+                        Console.WriteLine("        /  \\                                     \\    ");
+                        Console.WriteLine("       /----\\-------------------------------------\\   ");
+                        Console.WriteLine("      /      \\                                     \\  ");
+                        Console.WriteLine("     /========\\=====================================\\ ");
+                        Console.WriteLine("    /          \\                                     \\");
+                        Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        Console.WriteLine("    |  ______  |                                    |");
+                        Console.WriteLine($"    |  |    |  | The {Thermostat.Name} is {(Thermostat.Heating ? "ON." : "OFF")}.             |");
+                        Console.WriteLine("    |  |----|  |                                    |");
+                        Console.WriteLine("    |  |    |  |                           ______   |");
+                        Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
+                        Console.WriteLine("    |          |                           |   _|   |");
+                        Console.WriteLine("    |          |                           |    |   |");
+                        Console.Write("    |          |                           |    |   |");
+                        Console.WriteLine();
+                        Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        
                         break;
 
                     case "3":
@@ -129,7 +193,7 @@ namespace SIMS
                         Console.WriteLine();
                         Console.WriteLine("---- Device Status ----");
                         Console.WriteLine($"{Lamp.Name}: {(Lamp.Description ? "ON" : "OFF")}");
-                        Console.WriteLine($"{Thermostat.Name} is {(Thermostat.Heating ? "heating up" : "chillin out")} (Current temperature: {Thermostat.Temperature} °C)");
+                        Console.WriteLine($"{Thermostat.Name} is {(Thermostat.Heating ? "ON" : "OFF")} (Current temperature: {Thermostat.Temperature} °C)");
                         Console.WriteLine($"{Shutter.Name}: {Shutter.Position} (0 = closed, 100 = opened)");
                         break;
 
