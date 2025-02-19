@@ -27,24 +27,48 @@ namespace SIMS
             while (!exit)
             {
                 Console.Clear();
-                Console.WriteLine("          ______________________________________      ");
-                Console.WriteLine("         /\\                                     \\     ");
-                Console.WriteLine("        /  \\                                     \\    ");
-                Console.WriteLine("       /----\\-------------------------------------\\   ");
-                Console.WriteLine("      /      \\                                     \\  ");
-                Console.WriteLine("     /========\\=====================================\\ ");
-                Console.WriteLine("    /          \\                                     \\");
-                Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
-                Console.WriteLine("    |  ______  |                                    |");
-                Console.WriteLine("    |  |    |  | 1. Lamp turn on/off                |");
-                Console.WriteLine("    |  |----|  | 2. Thermostat manual turn on/off   |");
-                Console.WriteLine("    |  |    |  | 3. Update Sensor values   ______   |");
-                Console.WriteLine("    |  ¯¯¯¯¯¯  | 4. Update the devices     |    |   |");
-                Console.WriteLine("    |          | 5. Current state          |   _|   |");
-                Console.WriteLine("    |          | 6. EXIT                   |    |   |");
-                Console.Write("    |          | CHOOSE:                   |    |   |");
-                Console.WriteLine();
-                Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                if (Lamp.Description)
+                {
+                    Console.WriteLine("          ______________________________________      ");
+                    Console.WriteLine("         /\\                                     \\     ");
+                    Console.WriteLine("        /  \\                                     \\    ");
+                    Console.WriteLine("       /----\\-------------------------------------\\   ");
+                    Console.WriteLine("      /      \\                                     \\  ");
+                    Console.WriteLine("     /========\\=====================================\\ ");
+                    Console.WriteLine("    /          \\                                     \\");
+                    Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                    Console.WriteLine("    |  ______  |                                    |");
+                    Console.WriteLine("    |  |████|  | 1. Lamp turn on/off                |");
+                    Console.WriteLine("    |  |----|  | 2. Thermostat manual turn on/off   |");
+                    Console.WriteLine("    |  |████|  | 3. Update Sensor values   ______   |");
+                    Console.WriteLine("    |  ¯¯¯¯¯¯  | 4. Update the devices     |    |   |");
+                    Console.WriteLine("    |          | 5. Current state          |   _|   |");
+                    Console.WriteLine("    |          | 6. EXIT                   |    |   |");
+                    Console.Write("    |          | CHOOSE:                   |    |   |");
+                    Console.WriteLine();
+                    Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                }
+                else
+                {
+                    Console.WriteLine("          ______________________________________      ");
+                    Console.WriteLine("         /\\                                     \\     ");
+                    Console.WriteLine("        /  \\                                     \\    ");
+                    Console.WriteLine("       /----\\-------------------------------------\\   ");
+                    Console.WriteLine("      /      \\                                     \\  ");
+                    Console.WriteLine("     /========\\=====================================\\ ");
+                    Console.WriteLine("    /          \\                                     \\");
+                    Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                    Console.WriteLine("    |  ______  |                                    |");
+                    Console.WriteLine("    |  |    |  | 1. Lamp turn on/off                |");
+                    Console.WriteLine("    |  |----|  | 2. Thermostat manual turn on/off   |");
+                    Console.WriteLine("    |  |    |  | 3. Update Sensor values   ______   |");
+                    Console.WriteLine("    |  ¯¯¯¯¯¯  | 4. Update the devices     |    |   |");
+                    Console.WriteLine("    |          | 5. Current state          |   _|   |");
+                    Console.WriteLine("    |          | 6. EXIT                   |    |   |");
+                    Console.Write("    |          | CHOOSE:                   |    |   |");
+                    Console.WriteLine();
+                    Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                }
 
                 string input = Console.ReadLine();
                 Console.WriteLine();
@@ -98,9 +122,6 @@ namespace SIMS
                             Console.WriteLine();
                             Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                         }
-
-                        break;
-
                         break;
 
                     case "2":
@@ -182,19 +203,41 @@ namespace SIMS
                     case "4":
                         Console.Clear();
                         user.UpdateDevices();
-                        Console.WriteLine("The devices were updated by the owner.");
+                        Console.WriteLine("          ______________________________________      ");
+                        Console.WriteLine("         /\\                                     \\     ");
+                        Console.WriteLine("        /  \\                                     \\    ");
+                        Console.WriteLine("       /----\\-------------------------------------\\   ");
+                        Console.WriteLine("      /      \\                                     \\  ");
+                        Console.WriteLine("     /========\\=====================================\\ ");
+                        Console.WriteLine("    /          \\                                     \\");
+                        Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        Console.WriteLine("    |  ______  |                                    |");
+                        Console.WriteLine("    |  |    |  | The devices were updated by a user.|");
+                        Console.WriteLine("    |  |----|  |                                    |");
+                        Console.WriteLine("    |  |    |  |                           ______   |");
+                        Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
+                        Console.WriteLine("    |          |                           |   _|   |");
+                        Console.WriteLine("    |          |                           |    |   |");
+                        Console.Write("    |          |                           |    |   |");
+                        Console.WriteLine();
+                        Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                        
                         break;
 
                     case "5":
                         Console.Clear();
-                        Console.WriteLine("---- Sensor Value ----");
-                        Console.WriteLine($"{lightSensor.Name}: {lightSensor.Value}");
-                        Console.WriteLine($"{tempSensor.Name}: {tempSensor.Value}");
+                        Console.WriteLine("\t---------- Sensor Value ----------");
                         Console.WriteLine();
-                        Console.WriteLine("---- Device Status ----");
-                        Console.WriteLine($"{Lamp.Name}: {(Lamp.Description ? "ON" : "OFF")}");
-                        Console.WriteLine($"{Thermostat.Name} is {(Thermostat.Heating ? "ON" : "OFF")} (Current temperature: {Thermostat.Temperature} °C)");
-                        Console.WriteLine($"{Shutter.Name}: {Shutter.Position} (0 = closed, 100 = opened)");
+                        Console.WriteLine($"\t{lightSensor.Name}: {lightSensor.Value}");
+                        Console.WriteLine($"\t{tempSensor.Name}: {tempSensor.Value}");
+                        Console.WriteLine();
+                        Console.WriteLine("=========================================================");
+                        Console.WriteLine();
+                        Console.WriteLine("\t---------- Device Status ----------");
+                        Console.WriteLine();
+                        Console.WriteLine($"\t{Lamp.Name}: {(Lamp.Description ? "ON" : "OFF")}");
+                        Console.WriteLine($"\t{Thermostat.Name} is {(Thermostat.Heating ? "ON" : "OFF")} (Current temperature: {Thermostat.Temperature} °C)");
+                        Console.WriteLine($"\t{Shutter.Name}: {Shutter.Position} (0 = closed, 100 = opened)");
                         break;
 
                     case "6":
