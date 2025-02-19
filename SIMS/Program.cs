@@ -89,7 +89,7 @@ namespace SIMS
                             Console.WriteLine("    /          \\                                     \\");
                             Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                             Console.WriteLine("    |  ______  |                                    |");
-                            Console.WriteLine($"    |  |████|  | The {Lamp.Name} is {(Lamp.Description ? "ON." : "OFF")}.                   |");
+                            Console.WriteLine("    |  |████|  |                                    |");
                             Console.WriteLine("    |  |----|  |                                    |");
                             Console.WriteLine("    |  |████|  |                           ______   |");
                             Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
@@ -98,6 +98,7 @@ namespace SIMS
                             Console.Write("    |          |                           |    |   |");
                             Console.WriteLine();
                             Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                            LampDes(Lamp);
                         }
                         else
                         {
@@ -112,7 +113,7 @@ namespace SIMS
                             Console.WriteLine("    /          \\                                     \\");
                             Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                             Console.WriteLine("    |  ______  |                                    |");
-                            Console.WriteLine($"    |  |    |  | The {Lamp.Name} is {(Lamp.Description ? "ON." : "OFF")}.                   |");
+                            Console.WriteLine("    |  |    |  |                                    |");
                             Console.WriteLine("    |  |----|  |                                    |");
                             Console.WriteLine("    |  |    |  |                           ______   |");
                             Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
@@ -121,6 +122,7 @@ namespace SIMS
                             Console.Write("    |          |                           |    |   |");
                             Console.WriteLine();
                             Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+                            LampDes(Lamp);
                         }
                         break;
 
@@ -136,7 +138,7 @@ namespace SIMS
                         Console.WriteLine("    /          \\                                     \\");
                         Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                         Console.WriteLine("    |  ______  |                                    |");
-                        Console.WriteLine($"    |  |    |  | The {Thermostat.Name} is {(Thermostat.Heating ? "ON." : "OFF")}.             |");
+                        Console.WriteLine("    |  |    |  |                                    |");
                         Console.WriteLine("    |  |----|  |                                    |");
                         Console.WriteLine("    |  |    |  |                           ______   |");
                         Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
@@ -145,7 +147,7 @@ namespace SIMS
                         Console.Write("    |          |                           |    |   |");
                         Console.WriteLine();
                         Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
-                        
+                        ThermDes(Thermostat);
                         break;
 
                     case "3":
@@ -212,7 +214,7 @@ namespace SIMS
                         Console.WriteLine("    /          \\                                     \\");
                         Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                         Console.WriteLine("    |  ______  |                                    |");
-                        Console.WriteLine("    |  |    |  | The devices were updated by a user.|");
+                        Console.WriteLine("    |  |    |  |                                    |");
                         Console.WriteLine("    |  |----|  |                                    |");
                         Console.WriteLine("    |  |    |  |                           ______   |");
                         Console.WriteLine("    |  ¯¯¯¯¯¯  |                           |    |   |");
@@ -221,7 +223,7 @@ namespace SIMS
                         Console.Write("    |          |                           |    |   |");
                         Console.WriteLine();
                         Console.WriteLine("    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
-                        
+                        UserUpdate();
                         break;
 
                     case "5":
@@ -236,7 +238,7 @@ namespace SIMS
                         Console.WriteLine("\t---------- Device Status ----------");
                         Console.WriteLine();
                         Console.WriteLine($"\t{Lamp.Name}: {(Lamp.Description ? "ON" : "OFF")}");
-                        Console.WriteLine($"\t{Thermostat.Name} is {(Thermostat.Heating ? "ON" : "OFF")} (Current temperature: {Thermostat.Temperature} °C)");
+                        Console.WriteLine($"\t{Thermostat.Name}: {(Thermostat.Heating ? "ON" : "OFF")} (Current temperature: {Thermostat.Temperature} °C)");
                         Console.WriteLine($"\t{Shutter.Name}: {Shutter.Position} (0 = closed, 100 = opened)");
                         break;
 
@@ -248,9 +250,39 @@ namespace SIMS
                         Console.WriteLine("That won't work here lil bro.");
                         break;
                 }
-
+                Console.SetCursorPosition(18, 16);
                 Console.WriteLine("\nPRESS ENTER TO CONTINUE...");
                 Console.ReadLine();
+            }
+        }
+        public static void LampDes(Lamp lamp)
+        {
+            Console.SetCursorPosition(17, 9);
+            string s = $"The {lamp.Name} is {(lamp.Description ? "ON." : "OFF")}.";
+            foreach (char c in s)
+            {
+                System.Threading.Thread.Sleep(100);
+                Console.Write(c);
+            }
+        }
+        public static void ThermDes(Thermostat therm)
+        {
+            Console.SetCursorPosition(17, 9);
+            string s = $"The {therm.Name} is {(therm.Heating ? "ON." : "OFF")}.";
+            foreach (char c in s)
+            {
+                System.Threading.Thread.Sleep(100);
+                Console.Write(c);
+            }
+        }
+        public static void UserUpdate()
+        {
+            Console.SetCursorPosition(17, 9);
+            string s = "The devices were updated by a user.";
+            foreach (char c in s)
+            {
+                System.Threading.Thread.Sleep(100);
+                Console.Write(c);
             }
         }
     }
